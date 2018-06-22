@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="com.struts2.action" extends="struts-default">
+		<action name="altaLibro" class="com.struts2.action.LibroAction" method="insertar">
+			<result>index.jsp</result>
+		</action>
+		<action name="consultaLibros" class="com.struts2.action.LibroAction" method="consultaLibros">
+			<result>consulta.jsp</result>
+		</action>		
+		<action name="bajaLibro" class="com.struts2.action.LibroAction" method="consultaLibros">
+			<result>baja.jsp</result>
+		</action>		
+		<action name="eliminaLibro" class="com.struts2.action.LibroAction" method="eliminaLibro">
+			<result>index.jsp</result>
+		</action>		
+		<action name="modificacion" class="com.struts2.action.LibroAction" method="consultaLibros">
+			<result>modificacion.jsp</result>
+		</action>		
+		<action name="modificaLibro" class="com.struts2.action.LibroAction" method="modificaLibro">
+			<result>index.jsp</result>
+		</action>		
+		
+	</package>
+</struts>
