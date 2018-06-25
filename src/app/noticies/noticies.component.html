@@ -1,0 +1,61 @@
+<h1>Diferentes noticies</h1>
+
+<form #formNoticies = "ngForm" (ngSubmit)="onSubmit(); formNoticies.reset()">
+	<p>
+		<label>Nom: </label>
+		<input type="text" name="nom" #nom="ngModel" [(ngModel)]="noticia.nom" required>
+		<span *ngIf="nom.touched && !nom.valid">
+			EL nom no pot estar buit i ha de ser un nom valid.
+		</span>
+	</p>
+
+	<p>
+		<label>Cognom: </label>
+		<input type="text" name="cognom" #cognom="ngModel" [(ngModel)]="noticia.cognom" required>
+		<span *ngIf="cognom.touched && !cognom.valid">
+			EL cognom no pot estar buit i ha de ser un cognom valid.
+		</span>
+	</p>
+
+	<p>
+		<label>Tematica: </label>
+		<input type="text" name="tematica" #tematica="ngModel" [(ngModel)]="noticia.tematica" required>
+		<span *ngIf="tematica.touched && !tematica.valid">
+			La Tematica no pot estar buida i ha de ser una Tematica valid.
+		</span>
+	</p>	
+
+
+	<p>
+		<label>Titol: </label>
+		<input type="text" name="titol" #titol="ngModel" [(ngModel)]="noticia.titol" required>
+		<span *ngIf="titol.touched && !titol.valid">
+			EL titol no pot estar buit i ha de ser un titol valid.
+		</span>
+	</p>	
+
+
+	<p>
+		<label>Missatge: </label>
+		<input type="text" name="missatge" #missatge="ngModel" [(ngModel)]="noticia.missatge" required>
+		<span *ngIf="missatge.touched && !missatge.valid">
+			EL missatge no pot estar buit i ha de ser un missatge valid
+		</span>
+	</p>	
+
+		<input type="submit" name="Guardar">
+</form>
+
+
+
+
+<div>
+	<h4>Llista de noticies</h4>
+	<ul>
+		<li *ngFor="let noticia of noticies">
+			{{noticia.nom}} {{noticia.cognom}} - {{noticia.tematica}} - {{noticia.titol}} <br>
+			{{noticia.missatge}}
+		</li>
+
+	</ul>
+</div>

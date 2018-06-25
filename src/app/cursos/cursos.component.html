@@ -1,0 +1,17 @@
+<div>
+
+	<h3>{{titol}}</h3>
+	<ul>
+		<li *ngFor="let Cursos of cursos; let i=index ">
+			<strong>Curso {{i+1}}: </strong>
+
+			<ul>
+				<li><strong>Nom: </strong> {{Cursos.nom}}</li>				
+				<li><strong>Localitat: </strong> {{Cursos.localitat}}</li>
+				<li><strong>Data inici: </strong> {{Cursos.dataInici}}</li>
+				<li><strong>Data finalitzacio: </strong> {{Cursos.dataFinalitzacio}}</li>		
+			</ul>
+		</li>	
+	</ul>
+
+</div>

@@ -1,0 +1,28 @@
+<body>
+<h1>{{titol}}</h1>
+
+<div *ngIf = "canviar == false" class="fondogreen">
+	
+	<ul>
+		<li><strong>Nom professor/a:</strong>{{professors[0].nom}}</li>
+		<li><strong>Mòdul:</strong> {{professors[0].modul}}</li>
+		<li><strong>Hores:</strong>{{professors[0].horesTotal}}</li>
+		<li><strong>Hores/set:</strong>{{professors[0].horesSetmana}}</li>
+		<li><strong>Dies:</strong>{{professors[0].dies}}</li>
+	</ul>
+	<button (click) = "canviarProfessor(true)">Mostrar un altre professor/a</button>
+</div>
+
+<div *ngIf = "canviar == true" class="fondoblue">
+	
+	<ul>
+		<li><strong>Nom professor/a:</strong>{{professors[1].nom}}</li>
+		<li><strong>Mòdul:</strong> {{professors[1].modul}}</li>
+		<li><strong>Hores:</strong>{{professors[1].horesTotal}}</li>
+		<li><strong>Hores/set:</strong>{{professors[1].horesSetmana}}</li>
+		<li><strong>Dies:</strong>{{professors[1].dies}}</li>
+	</ul>
+	<button (click) = "canviarProfessor(false)">Mostrar un altre professor/a</button>
+</div>
+
+</body>
